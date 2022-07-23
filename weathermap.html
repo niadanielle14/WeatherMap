@@ -20,6 +20,7 @@
 <body>
 <!--NavBar Search Button -->
 <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" id="title" href="#">Traveler's WeatherMap</a>
     <div class="container-fluid">
         <form class="d-flex">
             <input id="search-value" class="form-control me-2" type="search" placeholder="Adventures await..." aria-label="Search">
@@ -28,13 +29,14 @@
     </div>
 </nav>
 
-<div class="container">
-    <div id="cityname"></div>
+<h2>Current Forecast</h2>
+<div class="col card container d-flex justify-content-center" id="card1">
+    <div id="cityname="></div>
     <div id="current-weather" class="row"></div>
 </div>
 
-<h2>5 Day Forcast</h2>
-<div class="container">
+<h2>5 Day Forecast</h2>
+<div class="container-fluid d-flex" id="card2">
     <div id="forcast" class="row"></div>
 </div>
 <div id='map' class="mx-auto mt-4"></div>
