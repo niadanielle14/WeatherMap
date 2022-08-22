@@ -9,6 +9,7 @@ h2 {
     text-align: center;
 }
 #cityname {
+    height: 250px;
     text-align: center;
     font-size: 30px;
 }
@@ -18,7 +19,7 @@ h2 {
 }
 
 .col-card {
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 
 
 }

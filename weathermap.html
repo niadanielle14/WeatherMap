@@ -30,16 +30,21 @@
 </nav>
 
 <h2>Current Forecast</h2>
+<section>
 <div class="col card container d-flex justify-content-center" id="card1">
     <div id="cityname="></div>
     <div id="current-weather" class="row"></div>
 </div>
+</section>
 
 <h2>5 Day Forecast</h2>
+<section>
 <div class="container-fluid d-flex" id="card2">
-    <div id="forcast" class="row"></div>
+    <div id="forecast" class="row"></div>
 </div>
 <div id='map' class="mx-auto mt-4"></div>
+</section>
+
 <script>
     function createMap (loc) {
         mapboxgl.accessToken = MAPBOX_API_TOKEN;

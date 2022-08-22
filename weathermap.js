@@ -13,22 +13,22 @@ function updateWeather (loc) {
         console.log('A step further - information for tomorrow: ', data.daily[1]); // Daily Data
 
         $('#current-weather').empty();
-        $('#forcast').empty();
+        $('#forecast').empty();
 
 
-        data.daily.forEach(function (dailyForcast, index) {
+        data.daily.forEach(function (dailyforecast, index) {
             if (index < 1) {
-                console.log(new Date(dailyForcast.dt * 1000)); // Current Date Display
-                console.log(dailyForcast.temp.max)
-                console.log(dailyForcast.humidity)
-                console.log(dailyForcast.pressure)
-                console.log(dailyForcast.wind_speed)
-                console.log(dailyForcast.weather[0].description)
+                console.log(new Date(dailyforecast.dt * 1000)); // Current Date Display
+                console.log(dailyforecast.temp.max)
+                console.log(dailyforecast.humidity)
+                console.log(dailyforecast.pressure)
+                console.log(dailyforecast.wind_speed)
+                console.log(dailyforecast.weather[0].description)
                 console.log(data.current.weather[0].description)
 
                 var html1 = '<div class="col card" >';
                 html1 += "<p>" + new Date(data.current.dt * 1000) + "</p>";
-                html1 += "<p><img src='http://openweathermap.org/img/wn/" + dailyForcast.weather[0].icon + "@2x.png'></p>"
+                html1 += "<p><img src='http://openweathermap.org/img/wn/" + dailyforecast.weather[0].icon + "@2x.png'></p>"
                 html1 += "<p> Temperature: " + data.current.temp.max + " °F</p>"
                 html1 += "<p> Description: " + data.current.weather[0].description + " </p>"
                 html1 += "<p> Humidity: " + data.current.humidity + "% </p>"
@@ -40,15 +40,15 @@ function updateWeather (loc) {
 
             if (index < 5) {
                 var html = '<div class="col card" >';
-                html += "<p>" + new Date(dailyForcast.dt * 1000) + "</p>";
-                html += "<p><img src='http://openweathermap.org/img/wn/" + dailyForcast.weather[0].icon + "@2x.png'></p>"
-                html += "<p> Temperature: " + dailyForcast.temp.max + " °F</p>"
-                html += "<p> Description: " + dailyForcast.weather[0].description + " </p>"
-                html += "<p> Humidity: " + dailyForcast.humidity + "% </p>"
-                html += "<p> Pressure: " + dailyForcast.pressure + "</p>"
-                html += "<p> Wind: " + dailyForcast.wind_speed + " mph</p>"
+                html += "<p>" + new Date(dailyforecast.dt * 1000) + "</p>";
+                html += "<p><img src='http://openweathermap.org/img/wn/" + dailyforecast.weather[0].icon + "@2x.png'></p>"
+                html += "<p> Temperature: " + dailyforecast.temp.max + " °F</p>"
+                html += "<p> Description: " + dailyforecast.weather[0].description + " </p>"
+                html += "<p> Humidity: " + dailyforecast.humidity + "% </p>"
+                html += "<p> Pressure: " + dailyforecast.pressure + "</p>"
+                html += "<p> Wind: " + dailyforecast.wind_speed + " mph</p>"
                 html += '</div>';
-                $('#forcast').append(html);
+                $('#forecast').append(html);
             }
 
 
@@ -62,3 +62,10 @@ function updateWeather (loc) {
 }
 
 updateWeather([-98.48527, 29.423017]);
+
+
+function tellCityName() {
+    return $('#cityname')
+}
+console.log(tellCityName());
+
