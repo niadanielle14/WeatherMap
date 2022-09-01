@@ -3,12 +3,13 @@
     height: 400px;
     align-content: center;
     /*background-image: linear-gradient(#4a67e0, white);*/
+    border-radius: 2rem;
 }
 
 h2 {
     text-align: center;
 }
-#cityname {
+#city-name {
     height: 250px;
     text-align: center;
     font-size: 30px;
@@ -19,8 +20,9 @@ h2 {
 }
 
 .col-card {
+    /*align-content: center;*/
     /*border: 1px solid black;*/
-
+    /*border-radius: 4rem;*/
 
 }
 
@@ -31,8 +33,9 @@ body {
 }
 
 #card1{
-    align-content: center;
-    /*width: 180px;*/
+
+    /*!*width: 180px;*!*/
+    border-radius: 5rem;
 
 
 }
